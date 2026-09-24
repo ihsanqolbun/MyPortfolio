@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg-primary: #222223;
+  --color-bg-card: #1A1A1C;
+  --color-bg-card-border: rgba(255, 255, 255, 0.08);
+  --color-text-primary: #FAF0E6;
+  --color-text-muted: #A1A1A6;
+  --color-text-subtle: #E6A8A8;
+  --color-accent-primary: #D5575E;
+  --color-accent-hover: #E06B71;
+  --color-accent-deep: #862A2D;
+  --color-glow: rgba(213, 87, 94, 0.12);
+}
+
+html:not(.dark) {
+  --color-bg-primary: #FEFEFE;
+  --color-bg-card: #F4F4F6;
+  --color-bg-card-border: rgba(0, 0, 0, 0.06);
+  --color-text-primary: #222223;
+  --color-text-muted: #6B6B6B;
+  --color-text-subtle: #862A2D;
+  --color-accent-primary: #862A2D;
+  --color-accent-hover: #6B1F23;
+  --color-accent-deep: #862A2D;
+  --color-glow: rgba(134, 42, 45, 0.12);
+}
+
+html:not(.dark) .text-stroke {
+  -webkit-text-stroke: 1.5px rgba(34, 34, 35, 0.15);
+  color: transparent;
+}
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1.5px rgba(254, 254, 254, 0.15);
+    color: transparent;
+  }
+
+  .text-stroke-dark {
+    -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.08);
+    color: transparent;
+  }
+
+  .bg-glow {
+    box-shadow: 0 0 60px var(--color-glow), 0 0 120px var(--color-glow);
+  }
+
+  .card-base {
+    @apply rounded-2xl border transition-transform duration-200 hover:-translate-y-1;
+    background-color: var(--color-bg-card);
+    border-color: var(--color-bg-card-border);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-200 hover:-translate-y-1 active:translate-y-0;
+    background-color: var(--color-accent-primary);
+    color: #FEFEFE;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-accent-hover);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border px-6 py-3 text-sm font-semibold transition-all duration-200 hover:-translate-y-1 active:translate-y-0;
+    border-color: var(--color-bg-card-border);
+    background-color: var(--color-bg-card);
+    color: var(--color-text-primary);
+  }
+
+  .section-container {
+    @apply mx-auto max-w-7xl px-6 lg:px-8;
+  }
+
+  .section-spacing {
+    @apply py-16 md:py-20;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+* {
+  border-color: var(--color-bg-card-border);
+}
