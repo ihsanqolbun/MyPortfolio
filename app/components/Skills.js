@@ -95,7 +95,7 @@ export default function Skills() {
                 >
                   <a
                     href="#contact"
-                    className="inline-flex items-center gap-1 rounded-lg bg-[var(--color-accent-primary)] px-3 py-1.5 text-xs font-medium text-white transition-all hover:-translate-y-0.5"
+                    className="inline-flex items-center gap-1 rounded-lg bg-[var(--color-accent-primary)] px-3 py-1.5 text-xs font-medium text-[var(--color-bg-primary)] transition-all hover:-translate-y-0.5"
                   >
                     <ArrowUpRight className="h-3 w-3" /> Discuss
                   </a>

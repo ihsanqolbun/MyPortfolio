@@ -13,7 +13,7 @@ export default function Hero() {
   const xRight = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
 
   return (
-    <section ref={ref} className="relative overflow-hidden py-16 md:py-20 bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
+    <section ref={ref} className="relative overflow-hidden pt-28 pb-16 md:pt-32 md:pb-20 bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10 grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -44,7 +44,7 @@ export default function Hero() {
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-xl bg-[var(--color-accent-primary)] px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-1"
+              className="inline-flex items-center gap-2 rounded-xl bg-[var(--color-text-primary)] text-[var(--color-bg-primary)] border border-[var(--color-text-primary)] transition-all duration-300 ease-out hover:bg-[var(--color-bg-primary)] hover:text-[var(--color-text-primary)] hover:-translate-y-1 px-6 py-3 text-sm font-semibold"
             >
               Hire Me
               <ArrowUpRight className="h-4 w-4" />

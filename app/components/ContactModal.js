@@ -111,7 +111,7 @@ export default function ContactModal({ isOpen, onClose }) {
                 </div>
                 <button
                   type="submit"
-                  className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-[var(--color-accent-primary)] px-6 py-3 text-sm font-bold text-white transition-all hover:-translate-y-0.5"
+                  className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-[var(--color-accent-primary)] px-6 py-3 text-sm font-bold text-[var(--color-bg-primary)] transition-all hover:-translate-y-0.5"
                 >
                   <Send className="h-4 w-4" />
                   Send Message

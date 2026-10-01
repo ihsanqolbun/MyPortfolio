@@ -50,13 +50,13 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: 0.08 * i, ease: "easeOut" }}
-                className="group relative flex items-center gap-5 rounded-2xl border border-black/[0.06] bg-[var(--color-bg-card)] p-5 transition-all duration-200 hover:-translate-y-1 dark:border-white/[0.08] sm:p-6"
+                className="group relative flex items-center gap-5 rounded-2xl border border-[var(--color-bg-card-border)] bg-[var(--color-bg-card)] p-5 transition-all duration-300 ease-out hover:translate-x-2 hover:border-[var(--color-text-primary)] hover:brightness-125 sm:p-6"
               >
                 <span className="absolute right-6 top-6 font-mono text-xs font-bold text-[var(--color-text-muted)] group-hover:text-[var(--color-accent-primary)]">
                   {item.number}
                 </span>
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-black/[0.04] transition-colors group-hover:text-[var(--color-accent-primary)] dark:bg-white/5">
-                  <ArrowRight className="h-5 w-5" />
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-black/[0.04] transition-all duration-300 ease-out group-hover:bg-[var(--color-text-primary)] dark:bg-white/5">
+                  <ArrowRight className="h-5 w-5 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:text-[var(--color-bg-primary)]" />
                 </div>
                 <div className="pr-8">
                   <p className="text-xs uppercase tracking-wider text-[var(--color-text-muted)]">
@@ -75,7 +75,7 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-              className="mt-2 flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--color-accent-primary)] px-6 py-4 text-center text-base font-bold text-white transition-all duration-200 hover:-translate-y-1 active:translate-y-0"
+              className="mt-2 flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--color-text-primary)] text-[var(--color-bg-primary)] border border-[var(--color-text-primary)] transition-all duration-300 ease-out hover:bg-[var(--color-bg-primary)] hover:text-[var(--color-text-primary)] hover:-translate-y-1 px-6 py-4 text-center text-base font-bold active:translate-y-0"
             >
               <Send className="h-5 w-5" />
               SEND ME A MESSAGE

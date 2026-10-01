@@ -140,7 +140,7 @@ export const certifications = [
   {
     name: "BNSP — Database",
     issuer: "BNSP",
-    issuedDate: "Terbit 2025",
+    issuedDate: "Terbit 2026",
     issued: true,
     image: null,
   },

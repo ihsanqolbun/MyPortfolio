@@ -69,7 +69,7 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-[var(--color-accent-primary)] px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-1"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[var(--color-accent-primary)] px-4 py-2 text-sm font-semibold text-[var(--color-bg-primary)] transition-all duration-200 hover:-translate-y-1"
                 >
                   View Project
                   <ExternalLink className="h-4 w-4" />

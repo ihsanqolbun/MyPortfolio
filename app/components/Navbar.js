@@ -75,7 +75,7 @@ export default function Navbar() {
           </motion.button>
           <a
             href="#contact"
-            className="hidden items-center gap-1.5 rounded-xl bg-[var(--color-accent-primary)] px-5 py-2 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 sm:inline-flex"
+            className="hidden items-center gap-1.5 rounded-xl bg-[var(--color-text-primary)] text-[var(--color-bg-primary)] border border-[var(--color-text-primary)] transition-all duration-300 ease-out hover:bg-[var(--color-bg-primary)] hover:text-[var(--color-text-primary)] hover:-translate-y-1 px-5 py-2 text-sm font-semibold sm:inline-flex"
           >
             Hire Me
             <ArrowUpRight className="h-4 w-4" />
@@ -108,7 +108,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-1 inline-flex items-center justify-center gap-1.5 rounded-xl bg-[var(--color-accent-primary)] px-5 py-2.5 text-sm font-semibold text-white sm:hidden"
+            className="mt-1 inline-flex items-center justify-center gap-1.5 rounded-xl bg-[var(--color-text-primary)] text-[var(--color-bg-primary)] border border-[var(--color-text-primary)] transition-all duration-300 ease-out hover:bg-[var(--color-bg-primary)] hover:text-[var(--color-text-primary)] hover:-translate-y-1 px-5 py-2.5 text-sm font-semibold sm:hidden"
           >
             Hire Me
             <ArrowUpRight className="h-4 w-4" />
