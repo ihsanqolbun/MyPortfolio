@@ -2,24 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Menu, X, Sun, Moon } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import { navLinks } from "../data/portfolioData";
 
 export default function Navbar() {
   const [active, setActive] = useState("#work");
   const [open, setOpen] = useState(false);
-  const [isDark, setIsDark] = useState(true);
-
-  useEffect(() => {
-    setIsDark(document.documentElement.classList.contains("dark"));
-  }, []);
-
-  const toggleTheme = () => {
-    const next = !isDark;
-    setIsDark(next);
-    document.documentElement.classList.toggle("dark", next);
-    localStorage.setItem("theme", next ? "dark" : "light");
-  };
 
   useEffect(() => {
     const ids = navLinks.map((l) => l.href.slice(1));
@@ -44,7 +32,7 @@ export default function Navbar() {
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="flex items-center justify-between gap-3 rounded-2xl border border-black/[0.06] bg-[var(--color-bg-card)]/70 px-4 py-2.5 shadow-2xl shadow-black/40 backdrop-blur-xl"
+        className="flex items-center justify-between gap-3 rounded-2xl border border-white/[0.08] bg-[var(--color-bg-card)]/70 px-4 py-2.5 shadow-2xl shadow-black/40 backdrop-blur-xl"
       >
         <a href="#work" className="pl-2 text-sm font-bold tracking-tight">
           Ihsan Qolbun
@@ -65,14 +53,6 @@ export default function Navbar() {
           ))}
         </div>
         <div className="flex items-center gap-2">
-          <motion.button
-            onClick={toggleTheme}
-            aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-            whileTap={{ scale: 0.9 }}
-            className="flex items-center justify-between gap-3 rounded-xl border border-black/[0.06] bg-[var(--color-bg-card)]/70 px-4 py-2.5 shadow-2xl shadow-black/40 backdrop-blur-xl"
-          >
-            {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-          </motion.button>
           <a
             href="#contact"
             className="hidden items-center gap-1.5 rounded-xl bg-[var(--color-text-primary)] text-[var(--color-bg-primary)] border border-[var(--color-text-primary)] transition-all duration-300 ease-out hover:bg-[var(--color-bg-primary)] hover:text-[var(--color-text-primary)] hover:-translate-y-1 px-5 py-2 text-sm font-semibold sm:inline-flex"
@@ -90,7 +70,7 @@ export default function Navbar() {
         </div>
       </motion.nav>
       {open && (
-        <div className="mt-2 flex flex-col gap-1 rounded-2xl border border-black/[0.06] bg-[var(--color-bg-card)]/95 p-4 backdrop-blur-xl lg:hidden">
+        <div className="mt-2 flex flex-col gap-1 rounded-2xl border border-white/[0.08] bg-[var(--color-bg-card)]/95 p-4 backdrop-blur-xl lg:hidden">
           {navLinks.map((link) => (
             <a
               key={link.href}

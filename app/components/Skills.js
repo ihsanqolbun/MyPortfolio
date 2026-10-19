@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { competencies, techStack } from "../data/portfolioData";
+import { techStack, competencies } from "../data/portfolioData";
 import { ArrowUpRight } from "lucide-react";
 
 export default function Skills() {
@@ -31,34 +31,41 @@ export default function Skills() {
               <span className="text-xs text-[var(--color-text-muted)]">(Click to filter)</span>
             </div>
 
-            <div className="grid grid-cols-4 gap-3 sm:grid-cols-6">
-              {techStack.map(({ name, icon: Icon }) => {
-                const isActive = activeSkill === name;
+            <div className="grid grid-cols-4 gap-3 sm:grid-cols-5">
+              {techStack.map((item) => {
+                const isActive = activeSkill === item.name;
+                const isFiltered = activeSkill && !isActive;
+                
                 return (
                   <motion.button
-                    key={name}
+                    key={item.name}
                     type="button"
-                    onClick={() => setActiveSkill(isActive ? null : name)}
-                    className={`flex flex-col items-center justify-center gap-1 rounded-xl p-3 transition-all duration-200 ${
+                    onClick={() => setActiveSkill(isActive ? null : item.name)}
+                    className={`flex flex-col items-center justify-center gap-2 rounded-xl p-3 transition-all duration-200 ${
                       isActive
                         ? "bg-[var(--color-accent-primary)]/20 border border-[var(--color-accent-primary)]"
                         : "bg-transparent border border-black/[0.06] hover:border-[var(--color-accent-primary)]/30 hover:bg-[var(--color-accent-primary)]/10 dark:border-white/[0.08]"
-                    }`}
+                    } ${isFiltered ? "opacity-30" : "opacity-100"}`}
                   >
                     <motion.div
                       animate={{ scale: isActive ? 1.1 : 1 }}
                       transition={{ duration: 0.2 }}
+                      className="flex items-center justify-center"
                     >
-                      <Icon className={`h-5 w-5 transition-colors ${
-                        isActive ? "text-[var(--color-text-primary)]" : "text-[var(--color-text-muted)]"
-                      }`} />
+                      <i 
+                        className={`${item.devicon} text-3xl ${
+                          item.monochrome 
+                            ? "!text-white" 
+                            : ""
+                        }`}
+                      />
                     </motion.div>
                     <span
-                      className={`text-xs font-medium transition-colors ${
+                      className={`text-xs font-medium transition-colors text-center leading-tight ${
                         isActive ? "text-[var(--color-text-primary)]" : "text-[var(--color-text-muted)]"
                       }`}
                     >
-                      {name}
+                      {item.name}
                     </span>
                   </motion.button>
                 );

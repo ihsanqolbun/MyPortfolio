@@ -1,13 +1,3 @@
-import {
-  SiPhp,
-  SiLaravel,
-  SiMysql,
-  SiGit,
-  SiJavascript,
-  SiTypescript,
-} from "react-icons/si";
-import { TbApi } from "react-icons/tb";
-
 export const navLinks = [
   { href: "#work", label: "WORK" },
   { href: "#skills", label: "WHAT I CAN DO" },
@@ -18,15 +8,19 @@ export const navLinks = [
 
 export const profile = {
   name: "Ihsan Qolbun",
-  tagline: "Problem Solver. Digital Generalist.",
-  role: "Backend Developer",
-  email: "ihsanqolbun@gmail.com",
+  tagline: "About",
+  role: "Full-Stack Developer",
+  email: "ihsanqolbun1@gmail.com",
   github: "https://github.com/ihsanqolbun",
   githubLabel: "github.com/ihsanqolbun",
   linkedin: "https://linkedin.com/in/ihsanqolbun-",
   linkedinLabel: "linkedin.com/in/ihsanqolbun-",
   resumePath: "/resume.pdf",
-  bio: "Mahasiswa tingkat akhir Sistem Informasi di Universitas Bina Sarana Informatika dengan sertifikasi BNSP Software Development. Saat magang di Pengadilan Agama, saya membangun sistem internal yang mengintegrasikan dua database nasional pemerintah — mencakup pelaporan perkara, manajemen data pihak lintas-database, dan penilaian kinerja triwulanan otomatis.",
+  bio: `Lulusan D3 Sistem Informasi Universitas Bina Sarana Informatika dengan sertifikasi BNSP di bidang Software Development.
+
+Memiliki pengalaman langsung dalam membangun sistem berbasis web. Saat magang di Pengadilan Agama, saya merancang dashboard rekap perkara berbasis PHP Native yang memangkas waktu proses dari hitungan jam menjadi hanya 5–10 detik, serta mengintegrasikan data lintas database. Berfokus pada backend engineering, optimalisasi data, dan efisiensi proses.
+
+Terbuka untuk peluang sebagai Junior Web Developer, Backend, atau Full-Stack Developer.`,
 };
 
 export const stats = [
@@ -37,14 +31,28 @@ export const stats = [
 
 export const traits = ["Detail-Oriented", "Organized", "Curious"];
 
+export const currently = [
+  { label: "Building", value: "Web & Database Systems" },
+  { label: "Learning", value: "TypeScript & Next.js" },
+  { label: "Focus", value: "Backend Architecture & Optimization" },
+];
+
 export const techStack = [
-  { name: "PHP", icon: SiPhp },
-  { name: "Laravel", icon: SiLaravel },
-  { name: "MySQL", icon: SiMysql },
-  { name: "REST API", icon: TbApi },
-  { name: "Git", icon: SiGit },
-  { name: "JavaScript", icon: SiJavascript },
-  { name: "TypeScript", icon: SiTypescript },
+  { name: "PHP", devicon: "devicon-php-plain colored" },
+  { name: "Laravel", devicon: "devicon-laravel-original colored" },
+  { name: "Node.js", devicon: "devicon-nodejs-plain colored" },
+  { name: "MySQL", devicon: "devicon-mysql-original colored" },
+  { name: "JavaScript", devicon: "devicon-javascript-plain colored" },
+  { name: "TypeScript", devicon: "devicon-typescript-plain colored" },
+  { name: "React", devicon: "devicon-react-original colored" },
+  { name: "Next.js", devicon: "devicon-nextjs-original colored", monochrome: true },
+  { name: "Inertia.js", devicon: "devicon-inertia-original colored", monochrome: true },
+  { name: "HTML", devicon: "devicon-html5-plain colored" },
+  { name: "CSS", devicon: "devicon-css3-plain colored" },
+  { name: "Git", devicon: "devicon-git-plain colored" },
+  { name: "Postman", devicon: "devicon-postman-plain colored" },
+  { name: "Figma", devicon: "devicon-figma-plain colored" },
+  { name: "Canva", devicon: "devicon-canva-original colored" },
 ];
 
 export const competencies = [
@@ -150,8 +158,8 @@ export const contacts = [
   {
     number: "01",
     label: "Email",
-    value: "ihsanqolbun@gmail.com",
-    href: "mailto:ihsanqolbun@gmail.com",
+    value: "ihsanqolbun1@gmail.com",
+    href: "mailto:ihsanqolbun1@gmail.com",
     external: false,
   },
   {

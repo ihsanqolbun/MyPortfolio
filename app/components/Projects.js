@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
-import { fadeUp, selectedWork, archiveProjects } from "../data/portfolioData";
+import { fadeUp, selectedWork } from "../data/portfolioData";
 import TypewriterText from "./TypewriterText";
 
 export default function Projects() {
@@ -79,75 +79,7 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className="mt-16 border-t border-[var(--color-bg-card-border)] pt-10">
-          <div className="mb-6">
-            <h3 className="text-2xl font-bold">
-              Technical & Digital Archive
-            </h3>
-            <p className="mt-2 text-[var(--color-text-muted)]">
-              Arsip lengkap seluruh proyek yang saya kerjakan.
-            </p>
-          </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm">
-              <thead>
-                <tr className="border-b border-[var(--color-bg-card-border)]">
-                  <th className="px-4 py-3 font-medium text-[var(--color-text-muted)]">No</th>
-                  <th className="px-4 py-3 font-medium text-[var(--color-text-muted)]">Project Name</th>
-                  <th className="hidden px-4 py-3 font-medium text-[var(--color-text-muted)] sm:table-cell">Category</th>
-                  <th className="px-4 py-3 font-medium text-[var(--color-text-muted)]">Tech Stack</th>
-                  <th className="px-4 py-3 text-right font-medium text-[var(--color-text-muted)]">Actions</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-[var(--color-bg-card-border)]">
-                {archiveProjects.map((project) => (
-                  <tr key={project.title} className="transition-colors hover:bg-[var(--color-bg-card)]/50">
-                    <td className="px-4 py-4 font-mono text-[var(--color-text-muted)]">{project.number}</td>
-                    <td className="px-4 py-4 font-medium">{project.title}</td>
-                    <td className="hidden px-4 py-4 text-[var(--color-text-muted)] sm:table-cell">{project.category}</td>
-                    <td className="px-4 py-4">
-                      <div className="flex flex-wrap gap-1.5">
-                        {project.stack.map((tech) => (
-                          <span
-                            key={tech}
-                            className="rounded-full bg-[var(--color-accent-primary)]/15 px-2 py-0.5 font-mono text-xs"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-right">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${project.title} source code`}
-                        className="mr-2 inline-flex items-center gap-1 rounded-lg border border-[var(--color-bg-card-border)] px-3 py-1 text-xs font-medium transition-colors hover:border-[var(--color-accent-primary)] hover:bg-[var(--color-accent-primary)]/10"
-                      >
-                        <FaGithub className="h-3 w-3" />
-                        Code
-                      </a>
-                      {project.live && project.live !== "#" && (
-                        <a
-                          href={project.live}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`${project.title} live site`}
-                          className="inline-flex items-center gap-1 rounded-lg border border-[var(--color-bg-card-border)] px-3 py-1 text-xs font-medium transition-colors hover:border-[var(--color-accent-primary)] hover:bg-[var(--color-accent-primary)]/10"
-                        >
-                          <ExternalLink className="h-3 w-3" />
-                          Live
-                        </a>
-                      )}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
       </div>
     </section>
   );

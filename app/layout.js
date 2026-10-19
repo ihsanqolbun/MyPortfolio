@@ -1,9 +1,16 @@
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Instrument_Serif, Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const serif = Instrument_Serif({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: "400",
+  variable: "--font-serif",
+  display: "swap",
+});
+
+const sans = Hanken_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -22,27 +29,11 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="id"
-      className={`${inter.variable} ${mono.variable}`}
+      className={`dark ${serif.variable} ${sans.variable} ${mono.variable}`}
       suppressHydrationWarning
     >
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function () {
-                try {
-                  var root = document.documentElement;
-                  var theme = localStorage.getItem("theme");
-                  root.classList.remove("light");
-                  var isDark = theme ? theme === "dark" : true;
-                  root.classList.toggle("dark", isDark);
-                } catch (e) {
-                  document.documentElement.classList.add("dark");
-                }
-              })();
-            `,
-          }}
-        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
       </head>
       <body className="font-sans antialiased bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
         {children}

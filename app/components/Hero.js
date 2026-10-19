@@ -32,14 +32,17 @@ export default function Hero() {
             </span>
           </div>
 
-          <motion.h1 {...fadeUp} className="text-4xl font-bold leading-[1.15] tracking-tight sm:text-5xl lg:text-6xl">
-            {profile.role} <br className="hidden sm:block" />
-            Creating Clean Systems
+          <motion.h1 {...fadeUp} className="text-4xl font-bold tracking-tight text-[var(--color-text-primary)] sm:text-5xl lg:text-6xl xl:text-7xl">
+            Hi, I'm Ihsan Qolbun
           </motion.h1>
 
-          <p className="max-w-xl text-base leading-relaxed text-[var(--color-text-muted)] sm:text-lg">
-            {profile.bio}
-          </p>
+          <motion.h2 {...fadeUp} className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+            Full-Stack Developer
+          </motion.h2>
+
+          <motion.p {...fadeUp} className="text-base font-semibold text-[var(--color-text-primary)] sm:text-lg">
+            Membangun sistem yang rapi dan efisien
+          </motion.p>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <a
@@ -68,13 +71,10 @@ export default function Hero() {
           className="relative flex min-h-[400px] items-center justify-center lg:col-span-7"
         >
           <div className="pointer-events-none absolute inset-0 z-0 flex select-none flex-col items-center justify-center overflow-hidden text-center leading-none" aria-hidden="true">
-            <motion.span style={{ x: xLeft }} className="whitespace-nowrap text-5xl font-black uppercase tracking-tighter text-stroke sm:text-6xl lg:text-7xl xl:text-8xl">
-              BACKEND DEVELOPER
-            </motion.span>
-            <motion.span style={{ x: xRight }} className="mt-8 whitespace-nowrap text-4xl font-black uppercase tracking-tighter text-stroke sm:text-5xl lg:text-6xl">
-              IHSAN QOLBUN
-            </motion.span>
-          </div>
+              <motion.span style={{ x: xLeft }} className="whitespace-nowrap text-5xl font-black uppercase tracking-tighter text-stroke sm:text-6xl lg:text-7xl xl:text-8xl">
+                PORTFOLIO
+              </motion.span>
+            </div>
 
           <motion.div
             animate={{ y: [0, -8, 0] }}
